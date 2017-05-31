@@ -1,0 +1,49 @@
+<HTML>
+	<head>
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+	
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js"></script>
+		<script src="saveScript.js"></script>
+		<link rel="manifest" href="/manifest.json">
+		<meta name="theme-color" content="blue"><!--does this work with color name?-->
+	</head>
+
+	<body id="body" style="height:100%;" onresize="" >
+		<div id="notifications" style="height:0;overflow:hidden;">
+			<div id="notificationInner" style="margin-top:18px;">Notification</div>
+			<div id="notificationX" onclick="stopNotify()">x</div>
+		</div>
+		<img id="backArrow" class="hide" src="arrow-back-128.png" onclick="moveToMainView()"></img>
+		<div id="mainDiv"> 
+			<div id="buttonHolder">
+				<div id="newButton" class="mainElements button" onclick="newRecipe()">New</div>
+				<div id="deleteButton" class="mainElements button hide" onclick="deleteRecipePrompt()">Delete</div>
+			</div>			
+			<div id="recipeNames" class="mainElements"></div>
+		</div>
+		<div id="editDiv" class="hide">
+			<div class="sectionTitle">Recipe Title</div>
+			<input id="currentRecipeTitle" onkeyup="titleInputChange(this)" ></input>
+			<hr style="margin:.1em; padding:0; width:100%;" ></hr>
+			<div class="sectionTitle">Ingredients</div>
+			<div id="ingredients" class="body"></div>
+			<div class="addButton" onclick="addButton(this)" id="ingredientsButton" >add</div>
+			<hr style="margin:.1em; padding:0; width:100%;" ></hr>
+			<div class="sectionTitle">Steps</div>
+			<div id="steps" class="body"></div>
+			<div class="addButton" onclick="addButton(this)" id="stepsButton" >add</div>
+		</div>
+		<div id="unsavedData" class="hide" onclick="saveRemoteData()">
+			<div>Save</div>
+		</div>
+	</body>
+</HTML>
+
+
+
+
+
+
+
