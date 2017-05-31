@@ -1,3 +1,0 @@
-core.ignore= \
-	{runtime-web.xml} \
-	{management-web.xml}
