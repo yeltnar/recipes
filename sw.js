@@ -1,16 +1,7 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
   '/',
-  '/recipes/',
-  '/staticFiles/bread.png',
-  '/staticFiles/home.svg',
-  '/staticFiles/icon.png',
-  '/staticFiles/icon2.png',
-  '/staticFiles/icon3.png',
-  '/staticFiles/main.js',
-  '/staticFiles/recipes.css',
-  '/styles/main.css',
-  '/script/main.js'
+  '/recipes/'
 ];
 
 self.addEventListener('install', function(event) {
