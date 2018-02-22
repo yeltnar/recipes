@@ -188,7 +188,7 @@ function showRecipe(name, title)
 	document.getElementById(name+"Content").classList.remove("hide");
 }
 
-
+makeUI()
 
 
 
