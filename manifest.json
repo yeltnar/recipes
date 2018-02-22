@@ -1,9 +1,14 @@
 {
-  "short_name": "Kinlan's Amaze App",
-  "name": "Kinlan's Amazing Application ++",
+  "short_name": "Recipes",
+  "name": "Recipes",
   "icons": [
     {
-      "src": "https://dl.dropboxusercontent.com/u/15707268/Recipes/staticFiles/icon.png",
+      "src": "staticFiles/icon144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "staticFiles/icon512.png",
       "sizes": "144x144",
       "type": "image/png"
     }
