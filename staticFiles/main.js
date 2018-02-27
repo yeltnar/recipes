@@ -1,4 +1,4 @@
-function makeUI()
+function makeUI(recipes)
 {
 	recipes.sort(sortfunction)
 	addRecipeNames(recipes, document.getElementById("mainBody"));
@@ -11,13 +11,6 @@ function sortfunction(a, b)
 	console.log("sortfunction");
 	return a.name.localeCompare( b.name );
 }
-
-recipes.sort(function (a, b) // TODO remove?
-{
-	console.log("compairing "+a+" and "+b)
-	return a.name.localeCompare(b.name);
-}
-);
 
 function setUpHeader()
 {
@@ -188,7 +181,6 @@ function showRecipe(name, title)
 	document.getElementById(name+"Content").classList.remove("hide");
 }
 
-makeUI()
 
 
 

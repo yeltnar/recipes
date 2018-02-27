@@ -51,6 +51,7 @@ var lengthShown = {
 
 function main()
 {
+	console.log("in main")
 	var dataURL = "https://script.google.com/macros/s/AKfycbwYZZAn20GTy32-2j0pikNRBMOYDhz76vgxgckbexeQDDPH_3Q/exec?que=recipe&type=get"
 
 	var siteName = "Recipes";
@@ -374,22 +375,3 @@ function toggleClass(e, className)
 		e.classList.add(className);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
