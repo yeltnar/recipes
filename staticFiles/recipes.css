@@ -38,7 +38,13 @@ a{
 }
 .body{
 	/*background-color:#303F9F;*/
+	padding-left: 7rem;
 }
+
+.body-element{
+	/* padding-left: 2rem; */
+}
+
 .hide{
 	max-height:0px !important;
 	overflow:hidden;

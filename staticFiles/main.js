@@ -15,7 +15,7 @@ function sortfunction(a, b)
 function setUpHeader()
 {
 	var header = document.getElementById("header");
-	header.setAttribute("style", "max-height:"+header.getBoundingClientRect().height+";");
+	// header.setAttribute("style", "max-height:"+header.getBoundingClientRect().height+";");
 }
 
 function addRecipeNames(recipes, element)
@@ -54,16 +54,18 @@ function getRecipeBody(recipe)
 	// add ingredients
 	{
 		var ingredientsDiv = document.createElement("div");
-		ingredientsDiv.className = "body";
+		var ingredientsUl = document.createElement("ul");
+		ingredientsUl.className = "body";
 
 		for (var i = 0; i < recipe.ingredients.length; i++)
 		{
-			var ingDiv = document.createElement("div");
+			var ingDiv = document.createElement("li");
 			ingDiv.innerHTML = recipe.ingredients[i];
 			ingDiv.className = "body-element";
-			ingredientsDiv.appendChild(ingDiv);
+			ingredientsUl.appendChild(ingDiv);
 		}
-		element.appendChild(ingredientsDiv);
+		// ingredientsDiv.appendChild(ingredientsUl);
+		element.appendChild(ingredientsUl);
 	}
 
 	// add break
@@ -79,14 +81,14 @@ function getRecipeBody(recipe)
 
 	// add steps
 	{
-		var stepsDiv = document.createElement("div");
+		var stepsDiv = document.createElement("ol");
 		stepsDiv.className = "body";
 
 		for (var i = 0; i < recipe.steps.length; i++)
 		{
-			var sDiv = document.createElement("div");
+			var sDiv = document.createElement("li");
 			var num = i + 1;
-			sDiv.innerHTML = num + ") " + recipe.steps[i];
+			sDiv.innerHTML = recipe.steps[i];
 			sDiv.className = "body-element";
 			stepsDiv.appendChild(sDiv);
 		}
